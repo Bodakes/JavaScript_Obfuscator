@@ -1,0 +1,14 @@
+doing obfuscation of  Modules 
+commands :- 
+Required Nodej version  is 14.18.2
+shopt -s globstar
+make new folder as newDir in IS-Admin
+cp modules/*/server/**/*.js --parents -t newDir
+
+
+
+npm install -g  javascript-obfuscator
+javascript-obfuscator newDir --output newDir/obfuscated disableConsoleOutput:true selfDefending:true stringArrayThreshold:0.75
+merge/replace  newdir/ofbuscated/modules folder with IS-Admin/ modules folder
+delete newdir
+
